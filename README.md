@@ -1,69 +1,93 @@
-# React + TypeScript + Vite
+# React Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek and modern React + Vite application designed for efficient and responsive search experiences.  
+Built using **React**, **TypeScript**, and **Material-UI (MUI)**, this app demonstrates clean architecture, modular code, and scalable frontend design patterns.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔍 **Instant Search** — Real-time debounced search input  
+- ⚙️ **Sort & Filter** — Sort by price, relevance, or custom fields  
+- ♾️ **Infinite Scroll** — Seamless loading of paginated results  
+- 💅 **Material-UI Styling** — Beautiful, responsive components  
+- ⚡ **Vite Build Tool** — Blazing fast startup and HMR  
+- 🧩 **Modular Folder Structure** — Easy to extend and maintain  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/Siddham97/react-search-app.git
+cd react-search-app
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+2️⃣ Install Dependencies
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+npm install
+# or
+yarn install
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3️⃣ Run the Development Server
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+npm run dev
+
+🏗️ Build for Production
+
+npm run build
+
+This command builds an optimized production bundle inside the dist/ folder.
+
+To preview the production build:
+
+npm run preview
+
+⚙️ Environment Variables
+
+If you’re integrating with an external API, create a .env file at the root:
+
+VITE_API_BASE_URL=https://api.yourservice.com
+VITE_SEARCH_ENDPOINT=/search
+VITE_PAGE_SIZE=20
+
+
+These values can be accessed using import.meta.env.
+
+📁 Project Structure
+react-search-app/
+├── public/
+│   └── index.html
+├── src/
+│   ├── api/
+│   │   └── searchService.ts
+│   ├── components/
+│   │   ├── SearchBar.tsx
+│   │   ├── SearchResults.tsx
+│   │   ├── FilterPanel.tsx
+│   │   └── InfiniteScrollList.tsx
+│   ├── hooks/
+│   │   └── useSearch.ts
+│   ├── pages/
+│   │   └── HomePage.tsx
+│   ├── App.tsx
+│   └── main.tsx
+├── .gitignore
+├── package.json
+└── README.md
+
+💻 Usage Instructions
+
+Type in a search query and press Enter.
+
+Results will automatically load and update.
+
+Scroll down to trigger infinite scroll and load additional results.
+
+Use available filters/sort options to refine the output.
+
+🧪 Running Tests
+
+If you have tests configured with Jest or Vitest:
+
+npm test
