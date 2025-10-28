@@ -1,0 +1,27 @@
+.app-container {
+  width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.item-card img {
+  max-width: 100%;
+  height: auto;
+}

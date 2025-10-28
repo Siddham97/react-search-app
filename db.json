@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "description": "Powerful laptop",
+      "price": 1200,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "name": "Phone",
+      "description": "Smartphone with great camera",
+      "price": 800,
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "name": "Headphones",
+      "description": "Noise-cancelling headphones",
+      "price": 300,
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
+}
